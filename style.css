@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    outline: none !important;
+}
+
+html,
+body {
+    background: #fff;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 0 10px;
+    transition: all 0.3s;
+}
+
+.head-forums {
+    font-size: 20px;
+}
+
+.head-subtitle {
+    font-size: 18px;
+}
+
+.head-posts {
+    font-size: 16px;
+}
+
+.box {
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    -moz-box-shadow: 0 4px 4px -2px #9eaab1;
+    -webkit-box-shadow: 0 4px 4px -2px #9eaab1;
+    box-shadow: 0 4px 4px -2px #9eaab1;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.box:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.box-left {
+    text-align: center;
+}
+
+.box-img {
+    width: 100%;
+    max-width: 450px;
+}
+
+.middle-header {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.middle-date {
+    color: #656665;
+    font-style: italic;
+}
+
+.fa-clock,
+.fa-map-marker {
+    margin-right: 5px;
+}
+
+.box-right {
+    border-top: 1px solid #dedede;
+    border-left: none;
+    width: 100%;
+    text-align: center;
+}
+
+.right-avatar {
+    text-align: center;
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.box-avatar {
+    width: 50%;
+    max-width: 70px;
+    border-radius: 50%;
+}
+
+.right-info {
+    width: 35%;
+    display: inline-block;
+    text-align: center;
+}
+
+.right-name {
+    color: #c83430;
+    font-weight: bold;
+}
+
+.right-city {
+    font-size: 10px;
+}
+
+.pagination {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.page {
+    padding: 5px 8px;
+}
+
+.active {
+    border-radius: 50%;
+    padding: 5px 8px;
+    color: #fff;
+    background: #c83430;
+}
+
+.previous {
+    margin-right: 10px;
+}
+
+.next {
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .box-left {
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .box-middle {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 10px;
+    }
+    .box-right {
+        width: calc(20% - 10px);
+        display: inline-block;
+        border-top: none;
+        border-left: 1px solid #dedede;
+        padding: 0 10px;
+    }
+    .middle-header {
+        margin-top: 0;
+    }
+    .middle-content {
+        margin: 10px 0;
+    }
+    .right-info {
+        width: 100%;
+    }
+    .right-avatar {
+        display: block;
+        width: 100%;
+    }
+    .box-avatar {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        max-width: 200px;
+    }
+}

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title>template</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="./vendor/jquery-3.3.1.min.js"></script>
+  <script src="./vendor/lodash.core.js"></script>
+  <script src="./vendor/moment.js"></script>
+  <script src="./vendor/handlebars-v4.0.11.js"></script>
+  <script defer src="./vendor/fontawesome-free-5.0.9/svg-with-js/js/fontawesome-all.min.js"></script>
+
+  <script id="built-in-helpers-template" type="text/x-handlebars-template">
+    {{#each information}}
+      <div class="box">
+        <div class="box-left">
+          {{#if image_url}}<img src={{image_url}} class="box-img" alt="cannot load image" />{{/if}}
+        </div>
+        <div class="box-middle">
+          <p class="middle-header">{{title}}</p>
+          <p class="middle-content">{{body}}</p>
+          <p class="middle-date"><i class="far fa-clock"></i>{{created_at}}</p>
+        </div>
+        <div class="box-right">
+          <div class="right-avatar">
+            {{#if avatar_url}}<img src={{avatar_url}} class="box-avatar" alt="cannot load image" />{{/if}}
+          </div>
+          <div class="right-info">
+            <p class="right-name">{{name}}</p>
+            <p class="right-user">{{role}}</p>
+            <p class="right-city"><i class="fas fa-map-marker"></i>{{place}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+    <div class="pagination">
+      <span class="previous" onclick="render({{currentPage}}-1)">Previous</span>
+      {{#each pageList}}
+        {{#if active}}
+          <span class="page active" onclick="render({{page}})">{{page}}</span>
+        {{else}}
+          <span class="page" onclick="render({{page}})">{{page}}</span>
+        {{/if}}
+      {{/each}}
+      <span class="next" onclick="render({{currentPage}}+1)">Next</span>
+    </div>
+  </script>
+</head>
+
+<body>
+  <p class="head-forums">MAQE Forums</p>
+  <p class="head-subtitle">Subtitle</p>
+  <p class="head-posts">Posts</p>
+  <div class="content-placeholder"></div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
