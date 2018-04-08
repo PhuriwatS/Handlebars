@@ -10,7 +10,6 @@
   <script src="./vendor/lodash.core.js"></script>
   <script src="./vendor/moment.js"></script>
   <script src="./vendor/handlebars-v4.0.11.js"></script>
-  <script defer src="./vendor/fontawesome-free-5.0.9/svg-with-js/js/fontawesome-all.min.js"></script>
 
   <script id="built-in-helpers-template" type="text/x-handlebars-template">
     {{#each information}}
@@ -21,7 +20,7 @@
         <div class="box-middle">
           <p class="middle-header">{{title}}</p>
           <p class="middle-content">{{body}}</p>
-          <p class="middle-date"><i class="far fa-clock"></i>{{created_at}}</p>
+          <p class="middle-date"><img src="./images/clock.png" class="icon" />{{created_at}}</p>
         </div>
         <div class="box-right">
           <div class="right-avatar">
@@ -30,7 +29,7 @@
           <div class="right-info">
             <p class="right-name">{{name}}</p>
             <p class="right-user">{{role}}</p>
-            <p class="right-city"><i class="fas fa-map-marker"></i>{{place}}</p>
+            <p class="right-city"><img src="./images/pin.png" class="icon" />{{place}}</p>
           </div>
         </div>
       </div>
